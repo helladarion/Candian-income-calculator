@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  simplereact:
+    build: 
+      context: .
+      dockerfile: docker.nodejs
+    image: my-react-simple
+    container_name: react-simple
+    ports:
+      - "8081:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
